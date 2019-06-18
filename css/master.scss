@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700,700i|Playfair+Display:700&display=swap');
+
+$text-font: 'Fira Sans', sans-serif;
+$heading-font: 'Playfair Display', serif;
+$rem: 16px;
+
+html {
+  margin: 0;
+  font: $rem $text-font;
+}
+body {
+  margin: 0;
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.hero {
+  box-sizing: border-box;
+  // width: 100vw;
+  height: 100vh;
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+  img {
+    width: 200px;
+    border-radius: 50%;
+    border: 0.5rem solid white;
+    box-shadow: 0 0 0 3px black;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.hero-heading {
+  // width: max-content;
+  height: min-content;
+
+  h1 {
+    font: 3rem $heading-font;
+    margin: 0.83rem 0 0.3rem 0;
+    padding-right: 2.5rem;
+  }
+
+  span {
+    font-style: italic;
+    font-size: 1.2rem;
+  }
+}
+
+.type > .wrap {
+  border-right: 0.16rem solid #222;
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: $rem - 3px;
+  }
+  .hero {
+    height: 85vh;
+    img {
+      width: 160px;
+    }
+  }
+  .hero-heading {
+    // width: 90vw;
+
+  }
+}
+body.loading {
+  opacity: 0;
+}
+.hero img.grow {
+  animation: grow 1s;
+}
+.hero-heading.fade-in {
+  animation: fade-in 2s;
+}
+@keyframes grow {
+  from {
+    width: 0px;
+    height: auto;
+  }
+  to {
+    width: 200px;
+    height: auto;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
