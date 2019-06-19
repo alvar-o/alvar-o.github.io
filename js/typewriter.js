@@ -48,9 +48,4 @@ var TxtType = function(el, toRotate, period) {
               new TxtType(elements[i], JSON.parse(toRotate), period);
             }
         }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        // css.innerHTML = ".type > .wrap { border-right: 0.16rem solid #222 }";
-        document.body.appendChild(css);
     };
