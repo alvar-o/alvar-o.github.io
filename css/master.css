@@ -67,13 +67,13 @@ body {
   background: -webkit-linear-gradient(#b1d2e6, #97bcd2);
   background: -o-linear-gradient(#b1d2e6, #97bcd2);
   background: linear-gradient(#b1d2e6, #97bcd2);
-  border: 1px solid #2e556b;
+  border: 1px solid #4f8fb4;
   border-radius: 0.4rem;
   position: fixed;
   bottom: 2rem;
   left: 35%;
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }

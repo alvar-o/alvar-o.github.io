@@ -63,12 +63,12 @@ body {
   width: 30%;
   padding: 0.6rem;
   background: linear-gradient(rgb(177, 210, 230), rgb(151, 188, 210));
-  border: 1px solid rgb(46, 85, 107);
+  border: 1px solid #4f8fb4;
   border-radius: 0.4rem;
   position: fixed;
   bottom: 2rem;
   left: 35%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.3);
   transition: all 0.3s;
 
   p {
