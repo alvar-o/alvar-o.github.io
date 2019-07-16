@@ -21,7 +21,7 @@ document.addEventListener('readystatechange', function() {
       console.log('moving');
       messageBubble.classList.remove('initial-state');
     });
-    document.addEventListener('touchstart', function() {
+    document.addEventListener('touchstartal', function() {
       console.log('moving');
       messageBubble.classList.remove('initial-state');
     });
