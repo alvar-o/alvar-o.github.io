@@ -137,6 +137,8 @@ body.loading {
   color: white;
   z-index: 1;
   transition: all 0.5s;
+  background: linear-gradient(to top, black, black 40%, white 80%, white 100%);
+  background-size: 100% 300%;
 
   &.hidden {
     opacity: 0;
@@ -150,6 +152,7 @@ body.loading {
     // animation-fill-mode: forwards;
     opacity: 1;
     transform: none;
+    background-position-y: 100%;
   }
 
   .projects-container {

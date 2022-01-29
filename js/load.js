@@ -31,7 +31,6 @@ function reveal() {
 }
 
 function revealProjects(e) {
-  console.log(e.wheelDeltaY);
   if (e.wheelDeltaY < 0) {
     projects.classList.remove('hidden')
     projects.classList.add('reveal')
