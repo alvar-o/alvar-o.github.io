@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="130px" viewBox="0 0 128 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>selo</title>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-656.000000, -425.000000)">
+            <g id="selo" transform="translate(656.000000, 425.196900)">
+                <rect id="Rectangle" fill="#FFFFFF" x="15" y="38.8031" width="98" height="51"></rect>
+                <path d="M64.0003948,0.8031 C99.3461795,0.8031 128,29.456788 128,64.8030013 C128,100.149412 99.3461795,128.8031 64.0003948,128.8031 C28.6538205,128.8031 0,100.149412 0,64.8030013 C0,29.456788 28.6538205,0.8031 64.0003948,0.8031" id="Fill-9" fill="#000000"></path>
+                <g id="Group-13" transform="translate(23.000000, 44.803100)" stroke="#FEFEFE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7348">
+                    <line x1="0.149897538" y1="1.22565217" x2="81.7117246" y2="1.22565217" id="Stroke-10"></line>
+                    <line x1="0.149897538" y1="19.7611667" x2="81.7117246" y2="19.7611667" id="Stroke-11"></line>
+                    <line x1="0.149897538" y1="36.3975782" x2="81.7117246" y2="36.3975782" id="Stroke-12"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
