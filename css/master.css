@@ -1,65 +1,58 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700,700i|Playfair+Display:700&display=swap");
 html {
   margin: 0;
-  font: 16px "Fira Sans", sans-serif; }
+  font: 16px "Fira Sans", sans-serif;
+}
 
 body {
   margin: 0;
-  opacity: 1;
-  -webkit-transition: opacity 2s;
-  -o-transition: opacity 2s;
-  transition: opacity 2s; }
+  overflow-y: hidden;
+}
 
-.hero {
-  -webkit-box-sizing: border-box;
+.hero,
+.hide-all {
   box-sizing: border-box;
-  height: 90vh;
-  margin: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center; }
-  .hero img {
-    width: 200px;
-    border-radius: 50%;
-    border: 0.5rem solid white;
-    -webkit-box-shadow: 0 0 0 3px black;
-    box-shadow: 0 0 0 3px black;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s; }
+  align-content: center;
+}
+
+.hero img {
+  width: 200px;
+  border-radius: 50%;
+  border: 0.5rem solid white;
+  box-shadow: 0 0 0 3px black;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  transition: all 1s;
+}
 
 .hero-heading {
-  height: -webkit-min-content;
-  height: -moz-min-content;
   height: min-content;
-  -webkit-transition: all 0.5s ease-in-out 1s;
-  -o-transition: all 0.5s ease-in-out 1s;
-  transition: all 0.5s ease-in-out 1s; }
-  .hero-heading h1 {
-    font: 3rem "Playfair Display", serif;
-    margin: 0.83rem 0 0.3rem 0;
-    padding-right: 2.5rem; }
-  .hero-heading span {
-    font-style: italic;
-    font-size: 1.2rem; }
+  transition: all 0.5s ease-in-out 1s;
+}
 
-.type > .wrap {
-  border-right: 0.16rem solid #222; }
+.hero-heading h1 {
+  font: 3rem "Playfair Display", serif;
+  margin: 0.83rem 0 0.3rem 0;
+  padding-right: 2.5rem;
+}
+
+.hero-heading span {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.typewriter > .wrap {
+  border-right: 0.16rem solid #222;
+  animation: blink-cursor 0.5s infinite running;
+}
 
 #message {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 30%;
   padding: 0.6rem;
@@ -68,44 +61,212 @@ body {
   position: fixed;
   bottom: 2rem;
   left: 35%;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s; }
-  #message p {
-    text-align: center;
-    font-size: 0.8rem;
-    line-height: 1.3;
-    margin: 0;
-    color: #666666; }
+  transition: all 0.3s;
+}
+
+#message p {
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  margin: 0;
+  color: #666666;
+}
 
 body.loading {
-  opacity: 0; }
+  opacity: 0;
+}
 
 .hero img.initial-state {
   width: 0px;
-  height: auto; }
+  height: auto;
+}
 
 .hero-heading.initial-state {
   opacity: 0;
-  -webkit-transform: translateY(2rem);
-  -ms-transform: translateY(2rem);
-  transform: translateY(2rem); }
+  transform: translateY(2rem);
+}
 
 #message.initial-state {
   opacity: 0;
-  -webkit-transform: translateY(130%);
-  -ms-transform: translateY(130%);
-  transform: translateY(130%); }
+  transform: translateY(130%);
+}
+
+@keyframes blink-cursor {
+  0% {
+    border-right: 0.16rem solid #222;
+  }
+  50% {
+    border-right: 0.16rem solid #222;
+  }
+  51% {
+    border-right: 0 solid transparent;
+  }
+  100% {
+    border-right: 0 solid transparent;
+  }
+}
+
+.projects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.projects.hidden {
+  opacity: 0;
+  transform: translateY(20%);
+  pointer-events: none;
+}
+
+.projects.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.projects .projects-container {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects h2 {
+  text-transform: uppercase;
+}
+
+.projects ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  padding: 0;
+  list-style: none;
+}
+
+.projects li {
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  width: min-content;
+}
+
+.projects li h4 {
+  margin-block: 0 10px;
+}
+
+.projects li a {
+  display: block;
+  padding: 12px;
+  color: unset;
+  text-decoration: none;
+  z-index: 10;
+  position: relative;
+}
+
+.projects li::before {
+  content: '';
+  display: none;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: 3;
+  background: conic-gradient(#fd004c, #f39000, #fff020, #3edf4b, #3363ff, #b102b7, #fd004c);
+}
+
+.projects li:hover::before {
+  display: block;
+  animation: spin-bg 0.5s infinite linear;
+}
+
+.projects li:hover h4 {
+  animation: blink 0.4s infinite linear;
+}
+
+.projects li:hover img {
+  border: 3px solid white;
+}
+
+.projects img {
+  width: 200px;
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+
+@keyframes spin-bg {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    color: white;
+  }
+  50% {
+    color: white;
+  }
+  51% {
+    color: black;
+  }
+  100% {
+    color: black;
+  }
+}
+
+.hide-all {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1.5s;
+  z-index: 100;
+}
+
+.hide-all.fade {
+  opacity: 0;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @media (max-width: 500px) {
   html {
-    font-size: 13px; }
+    font-size: 13px;
+  }
   .hero {
-    height: 75vh; }
-    .hero img {
-      width: 160px; }
+    height: 75vh;
+    flex-direction: column;
+  }
+  .hero img {
+    width: 160px;
+    margin-right: 0;
+  }
+  .hero h1 {
+    padding-right: 0;
+  }
+  .projects ul {
+    flex-direction: column;
+    align-items: center;
+  }
   #message {
     width: 80%;
-    left: 10%; } }
+    left: 10%;
+  }
+}
