@@ -3,7 +3,7 @@
     --light-text: #d8d8d8;
     --light-bg: #f6f6f6;
     --light-alt-bg: #f0f0f0;
-    --dark-alt: #101010;
+    --dark-alt: #1b1b1b;
 
     /* light theme */
     --body-bg: var(--light-bg);
@@ -351,5 +351,8 @@ p.sub {
         --text-color: var(--light-text);
         --article-odd-bg: var(--dark);
         --article-even-bg: var(--dark-alt);
+    }
+    .award::before, .award::after {
+        filter: invert(1);
     }
 }
