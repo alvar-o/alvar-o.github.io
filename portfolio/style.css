@@ -121,21 +121,18 @@ article .display {
     height: auto;
 }
 
-h2 a {
-    text-decoration: none;
-}
-
 a {
     display: inline-block;
     padding: 0.3em 0 0.3em 0;
     color: inherit;
+    text-decoration: none;
 }
 
 a::after {
     content: '';
     display: inline-block;
-    -webkit-mask: url('https://static.tumblr.com/blvohn3/QOXr0qk1v/link-icon.svg') no-repeat 50% 50%;
-    mask: url('https://static.tumblr.com/blvohn3/QOXr0qk1v/link-icon.svg') no-repeat 50% 50%;
+    -webkit-mask: url('/portfolio/img/link-icon.svg') no-repeat 50% 50%;
+    mask: url('/portfolio/img/link-icon.svg') no-repeat 50% 50%;
     margin-left: 0.3em;
     width: 0.5em;
     height: 0.65em;
@@ -144,8 +141,7 @@ a::after {
 }
 
 a:hover {
-    background-color: var(--text-color);
-    color: var(--body-bg);
+    text-decoration: underline;
 }
 .awards {
     margin-block: 0;
